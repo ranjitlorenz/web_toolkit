@@ -1,0 +1,69 @@
+How to push committed changes in GitHub
+
+
+
+Show thinking
+You've committed your changes locally – that's the first crucial step! Now, to get those committed changes from your local computer up to your GitHub repository, you need to "push" them.
+
+This process uses Git commands in your terminal or command prompt.
+
+Here's a step-by-step guide:
+
+Prerequisites:
+Git Installed: Make sure you have Git installed on your computer. If not, download it from git-scm.com.
+Git Configured (First Time Setup): If this is your very first time using Git, you'll need to tell it your name and email. Open your terminal/command prompt and run these two commands (replace with your actual name and email):
+Bash
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+Local Repository Linked to GitHub: When you initially created the GitHub repository and uploaded files, Git usually sets up the connection. If you cloned the repository, it's already linked. If you started locally and then linked, you would have used git remote add origin <repo_url>.
+Steps to Push Your Committed Changes:
+Open Your Terminal/Command Prompt:
+
+Windows: Search for "Command Prompt" or "Git Bash" (if you installed Git Bash).
+macOS/Linux: Open "Terminal."
+Navigate to Your Project Directory:
+
+Use the cd (change directory) command to go into the root folder of your project (e.g., my_web_tools) where your app.py, requirements.txt, etc., are located.
+Example:
+Bash
+
+cd path/to/your/my_web_tools
+(Replace path/to/your/my_web_tools with the actual path on your computer).
+Verify Your Changes (Optional but Recommended):
+
+Before pushing, you can check the status of your repository.
+Type:
+Bash
+
+git status
+You should see something like "nothing to commit, working tree clean" if all your local changes are already committed. If you see files listed under "Changes to be committed," it means you still need to commit them (see step 4).
+Add and Commit Any Uncommitted Changes (If Applicable):
+
+If git status showed uncommitted changes, you need to add them to the staging area and then commit them.
+Add all changes:
+Bash
+
+git add .
+Commit the changes:
+Bash
+
+git commit -m "Updated for PDF conversion only"
+(Use a descriptive message for your commit.)
+If your changes were already committed (as you mentioned), you can skip this step.
+Push Your Committed Changes to GitHub:
+
+This is the command that sends your local commits to the remote GitHub repository.
+Type:
+Bash
+
+git push origin main
+Explanation:
+git push: The command to push changes.
+origin: This is the default name for your remote GitHub repository.
+main: This is the name of the branch you are pushing to (most modern GitHub repositories use main as the default branch name. Older ones might use master). If your branch is master, use git push origin master.
+Authentication:
+The first time you git push from a new location or after a while, Git might ask you to authenticate with GitHub.
+Modern GitHub: It will likely open a browser window for you to log in to GitHub or ask you to use a Personal Access Token (PAT).
+Older Git: It might ask for your GitHub username and password directly in the terminal (though PATs are now preferred and more secure).
+Once the push is successful, you'll see messages indicating that your branch has been updated on GitHub. Go to your GitHub repository in your web browser, refresh the page, and you should see your latest committed changes reflected there! Render will then automatically detect these changes and start a new deployment.

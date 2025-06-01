@@ -1,0 +1,16 @@
+.venv/
+
+env/
+
+__pycache__/
+
+*.pyc
+
+*.sqlite3
+
+*.db
+
+uploads/ # If you create an uploads folder locally
+.DS_Store
+
+small.pt # Whisper model file, usually downloaded to cache
