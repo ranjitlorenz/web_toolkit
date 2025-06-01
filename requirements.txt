@@ -1,0 +1,6 @@
+Flask
+
+gunicorn           # Render uses gunicorn to run Flask/Django apps
+openai-whisper
+
+PyMuPDF            # if you use PyMuPDF for PDF conversion
