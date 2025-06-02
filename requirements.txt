@@ -1,9 +1,3 @@
-<<<<<<< HEAD
 Flask
 gunicorn
 PyMuPDF
-=======
-Flask
-gunicorn
-PyMuPDF
->>>>>>> 7c7bdb5dfa3717a7d188f5093bbabb694b7e64df
